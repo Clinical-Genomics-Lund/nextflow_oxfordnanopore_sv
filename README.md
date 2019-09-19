@@ -1,7 +1,11 @@
 # nextflow_oxfordnanopore_sv
 Nextflow pipeline for detection of structural variants from Oxford Nanopore data
 
-
+KRAV
+- Installera singularity 
+- Installera nextflow
+- Bygg container med singularity/build_container.sh
+- Editera run_pipeline.sh och kör så det ryker!
 
 FILER
 - nextflow.config anger var referensgenom finns samt output och lite övrig konfig
@@ -16,3 +20,7 @@ MAPPAR
 - singularity     innehåller container med mjuvkaran
 - testfastq       mapp med testfastq
 - work            här hamnar resultat/tmpfiler mm under körning
+
+FLOWCHART
+
+![Alt text](flowchart.png?raw=true "Flowchart")
