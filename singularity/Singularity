@@ -1,0 +1,18 @@
+Bootstrap:docker
+From:nfcore/base
+
+%labels
+	MAINTAINER Björn Hallström <bjorn.hallstrom@skane.se>
+	DESCRIPTION Singularity container for CMD WGS pipeline
+	VERSION 0.0.1
+
+%environment
+	PATH=/opt/conda/envs/CMD-ONTE/bin/:$PATH		
+
+%files
+        environment.yml /
+
+%post
+	/opt/conda/bin/conda env create -f /environment.yml
+	/opt/conda/bin/conda clean -a
+
